@@ -12,17 +12,11 @@ public class ExcelUtils {
 	
 	public ExcelUtils(String excelPath, String sheetName){
 		try {
-			
 			wb = new XSSFWorkbook(excelPath);
 			sheet = wb.getSheet(sheetName);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-	}
-	
-	public static void main(String[] args) {
-		
-		
 	}
 	
 	//Get Row count
