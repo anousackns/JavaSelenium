@@ -20,17 +20,35 @@ public class ExcelUtils {
 	}
 	
 	//Get Row count
-	public static void getRowCount() {
+	public static int getRowCount() {
+		int rowCount = 0;
 		try {
-			int rows = sheet.getPhysicalNumberOfRows();
-			System.out.println("# of rows : " +rows);
+			rowCount = sheet.getPhysicalNumberOfRows();
+			System.out.println("# of rows : " +rowCount);
 			
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
 			System.out.println(e.getCause());
 			e.printStackTrace();
 		}
+		return rowCount;
 	}
+	
+	//Get Column count
+		public static int getColCount() {
+			int colCount =0;
+			try {
+				colCount = sheet.getRow(0).getPhysicalNumberOfCells();
+				System.out.println("# of rows : " +colCount);
+				
+			} catch (Exception e) {
+				System.out.println(e.getMessage());
+				System.out.println(e.getCause());
+				e.printStackTrace();
+			}
+			return colCount;
+
+		}
 	
 	//Get cell data string
 	public static void getCellDataString(int rowNum, int colNum){
