@@ -5,7 +5,7 @@ public class ExcelUtilsDemo {
 	public static void main(String[] args) {
 		//set working directory path
 		String projectPath = System.getProperty("user.dir");
-		//parameters for contructor
+		//parameters for constructor
 		new ExcelUtils(projectPath+"/excel/Test.xlsx", "S2");
 		
 		ExcelUtils.getRowCount();

@@ -22,8 +22,19 @@ public class ExcelUtils {
 	//Get Row count
 	public static void getRowCount() {
 		try {
-			int rows = sheet.getPhysicalNumberOfRows();
-			System.out.println("# of rows : " +rows);
+			int rowCount = sheet.getPhysicalNumberOfRows();
+			System.out.println("# of rows : " +rowCount);
+			
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
+			System.out.println(e.getCause());
+			e.printStackTrace();
+		}
+	}
+	public static void getColCount() {
+		try {
+			int colCount = sheet.getRow(0).getPhysicalNumberOfCells();
+			System.out.println("Number of rows : " +colCount);
 			
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
