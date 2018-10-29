@@ -9,7 +9,11 @@ public class ExcelDataProvider {
 		int rowCount = excel.getRowCount();
 		int colCount = excel.getColCount();
 
-		
+		for(int i=1; i < rowCount; i++) {
+			for(int j=1; j < colCount; j++) {
+				
+			}
+		}
 	}
 	
 }
